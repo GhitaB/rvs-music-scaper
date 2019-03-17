@@ -8,3 +8,4 @@ eggs/
 .mr.developer.cfg
 develop-eggs/
 *.pyc
+songs_details.txt

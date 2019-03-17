@@ -57,4 +57,7 @@ def main():
         print "{0}".format(song_url)
 
     if SAVE_DETAILS_IN_FILE is True:
+        with open(FILE_NAME, "w") as text_file:
+            text_file.write("{0}".format(data))
+
         print "Details saved in {0}.".format(FILE_NAME)
