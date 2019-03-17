@@ -5,6 +5,10 @@ Just for fun. :)
 
 Usage:
 
+$ git clone git@github.com:GhitaB/rvs-music-scraper.git
+
+$ cd rvs-music-scraper
+
 $ virtualenv .
 
 $ ./bin/pip install zc.buildout
