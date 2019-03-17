@@ -3,11 +3,11 @@ import urllib2
 
 
 data = {}
-CONSECUTIVE_NO_NEW = 30  # We don't know how many songs there are, but if we
+CONSECUTIVE_NO_NEW = 3  # We don't know how many songs there are, but if we
 # don't find new onces for x consecutive page reloads, we conclude we found
 # all of them.
 
-SAVE_DETAILS_IN_FILE = False
+SAVE_DETAILS_IN_FILE = True
 FILE_NAME = "songs_details.txt"
 
 SAVE_MP3S = False
@@ -39,7 +39,10 @@ def main():
         new = 1
         while new != 0:
             new = scrap_once()
-            print "(Re)try: Found {0} new songs. ".format(new)
+            print "(Re)try: Found {0} new songs. Total: {1}".format(
+                new,
+                len(data.keys())
+            )
 
         if new == 0:
             consecutive_new += 1
@@ -52,3 +55,6 @@ def main():
     for song_title in data.keys():
         song_url = data[song_title]
         print "{0}".format(song_url)
+
+    if SAVE_DETAILS_IN_FILE is True:
+        print "Details saved in {0}.".format(FILE_NAME)
