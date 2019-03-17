@@ -18,3 +18,5 @@ $ ./bin/buildout
 
 $ ./bin/rvs_scraper
 ```
+
+Then open the Songs folder... :)
