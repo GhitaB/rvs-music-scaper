@@ -3,7 +3,7 @@ Test web scraping on rvs.
 
 Just for fun. :)
 
-Usage:
+## Usage:
 
 $ git clone git@github.com:GhitaB/rvs-music-scraper.git
 
