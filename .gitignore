@@ -7,3 +7,4 @@ share/
 eggs/
 .mr.developer.cfg
 develop-eggs/
+*.pyc
