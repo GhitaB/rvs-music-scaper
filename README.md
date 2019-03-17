@@ -5,6 +5,7 @@ Just for fun. :)
 
 ## Usage:
 
+```
 $ git clone git@github.com:GhitaB/rvs-music-scraper.git
 
 $ cd rvs-music-scraper
@@ -16,3 +17,4 @@ $ ./bin/pip install zc.buildout
 $ ./bin/buildout
 
 $ ./bin/rvs_scraper
+```
