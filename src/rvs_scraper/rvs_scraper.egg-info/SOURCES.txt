@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+rvs_scraper.egg-info/PKG-INFO
+rvs_scraper.egg-info/SOURCES.txt
+rvs_scraper.egg-info/dependency_links.txt
+rvs_scraper.egg-info/top_level.txt
