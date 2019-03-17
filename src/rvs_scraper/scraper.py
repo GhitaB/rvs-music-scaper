@@ -1,16 +1,18 @@
 from bs4 import BeautifulSoup
+import os
+import urllib
 import urllib2
 
 
 data = {}
-CONSECUTIVE_NO_NEW = 3  # We don't know how many songs there are, but if we
+CONSECUTIVE_NO_NEW = 100  # We don't know how many songs there are, but if we
 # don't find new onces for x consecutive page reloads, we conclude we found
 # all of them.
 
 SAVE_DETAILS_IN_FILE = True
 FILE_NAME = "songs_details.txt"
 
-SAVE_MP3S = False
+SAVE_MP3S = True
 FOLDER_NAME = "Songs"
 
 
@@ -61,3 +63,25 @@ def main():
             text_file.write("{0}".format(data))
 
         print "Details saved in {0}.".format(FILE_NAME)
+
+    if SAVE_MP3S is True:
+        print "Downloading mp3 files to {0}...".format(FOLDER_NAME)
+
+        if not os.path.exists(FOLDER_NAME):
+            os.makedirs(FOLDER_NAME)
+
+        for song_title in data.keys():
+            song_url = data[song_title]
+            print "Downloading {0}...".format(song_url)
+
+            mp3_file_destination = "{0}/{1}.mp3".format(
+                FOLDER_NAME,
+                song_title.encode("utf-8")
+            )
+            mp3_file = urllib.URLopener()
+            mp3_file.retrieve(
+                song_url,
+                mp3_file_destination
+            )
+
+    print "Done!"
