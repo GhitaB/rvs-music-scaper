@@ -25,9 +25,21 @@ def scrap_once():
 
 
 def main():
-    new = 1
-    while new != 0:
-        new = scrap_once()
-        print new
+    consecutive_new = 0
+    while consecutive_new != 30:
+        new = 1
+        while new != 0:
+            new = scrap_once()
+            print "(Re)try: Found {0} new songs. ".format(new)
 
-    print data
+        if new == 0:
+            consecutive_new += 1
+        else:
+            consecutive_new = 0
+
+    print "Total songs found: {0}".format(len(data.keys()))
+
+    print "The list of URLs:"
+    for song_title in data.keys():
+        song_url = data[song_title]
+        print "{0}".format(song_url)
