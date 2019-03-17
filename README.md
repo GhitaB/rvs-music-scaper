@@ -1,9 +1,9 @@
-# rvs-music-scraper
+# :notes: rvs-music-scraper
 Test web scraping on rvs.
 
 Just for fun. :)
 
-## Usage:
+## :star: Usage:
 
 ```
 $ git clone git@github.com:GhitaB/rvs-music-scraper.git
@@ -19,4 +19,4 @@ $ ./bin/buildout
 $ ./bin/rvs_scraper
 ```
 
-Then open the Songs folder... :)
+Then open the Songs folder... :heart_eyes:
