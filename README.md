@@ -20,3 +20,5 @@ $ ./bin/rvs_scraper
 ```
 
 Then open the Songs folder... :heart_eyes:
+
+[![Contact me on Codementor](https://www.codementor.io/m-badges/ghitab/find-me-on-cm-b.svg)](https://www.codementor.io/@ghitab?refer=badge)
